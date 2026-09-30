@@ -2,7 +2,7 @@
 
 A lightweight Nashville vacation-home website hosted on GitHub Pages.
 
-Live site: [therhinestonerambler.com](https://therhinestonerambler.com)  
+Live site: [therhinestonerambler.com](http://therhinestonerambler.com) (GitHub is provisioning HTTPS)
 Repository: [IzzyIsaac/the-rhinestone-rambler](https://github.com/IzzyIsaac/the-rhinestone-rambler)  
 Publishing source: `main` branch, repository root.
 
@@ -10,7 +10,7 @@ Publishing source: `main` branch, repository root.
 
 Open `index.html` in Chrome, Safari, Edge, or Firefox. Keep the `assets` folder beside it. The page and photo viewer work locally; the Airbnb and sister-property links need internet access.
 
-The live preview from this Codex task is at [http://127.0.0.1:4173/](http://127.0.0.1:4173/). If that server has stopped, opening `index.html` still works.
+The live domain above is the easiest preview. Opening `index.html` directly also works if you are offline.
 
 ## Keep it organized on GitHub
 
