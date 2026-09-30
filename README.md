@@ -42,6 +42,12 @@ The `www` value excludes `https://` and the repository name. Keep the root-level
 
 If you choose another domain, replace `https://therhinestonerambler.com` in `index.html`, `photos.html`, `robots.txt`, and `sitemap.xml`, and use that domain in Pages settings.
 
+## Google Analytics
+
+This site has its own Google Analytics 4 property, **The Rhinestone Rambler**, in the existing Google Analytics account. The web stream uses measurement ID `G-GVCBTM1FSR`, separate from The Rambler’s Rest. Enhanced measurement is on, including page views, scrolls, and outbound clicks to Airbnb.
+
+The small privacy choice shown to new visitors controls `assets/js/analytics.js`. It saves the visitor’s choice in this browser and does not load Google’s tag until they choose **Allow analytics**. Visitors can reopen it using **Privacy choices** in the footer. As a result, Google Analytics reports only consenting visits. You can view activity in Google Analytics under **The Rhinestone Rambler → Reports → Realtime**; new reports can take a little time to populate. If you change the measurement ID later, update it in `assets/js/analytics.js`.
+
 ## What is included
 
 ```text
@@ -56,6 +62,7 @@ rhinestone-rambler/
 └── assets/
     ├── css/main.css     Responsive styles and colors
     ├── js/main.js       Photo viewer, captions, and copyright year
+    ├── js/analytics.js  Consent choice and this site's GA4 tag
     ├── fonts/           Local Fraunces font and its license
     ├── images/          Local WebP photos, in responsive sizes
     ├── favicon.svg      Small rhinestone/star browser icon
@@ -79,7 +86,7 @@ The initial property facts and 32-photo tour came from your [Airbnb listing](htt
 
 Give the stay details a quick read: king/full beds, couch sleeping space, six-guest maximum, adult-oriented decor, no pets, two entry steps, check-in/out times, quiet hours, cameras, and permit number. The wording reflects the listing and your subsequent corrections and should be updated if your policies change.
 
-Rates, reviews, availability, reservations, and guest messages stay on Airbnb. The site does not sync listing changes automatically. There is no calendar integration, payment form, analytics tracker, or subscription to maintain. It makes no third-party requests to load its photos or font.
+Rates, reviews, availability, reservations, and guest messages stay on Airbnb. The site does not sync listing changes automatically. There is no calendar integration, payment form, or subscription to maintain. Photos and font load locally; the Google Analytics tag loads only after a visitor opts in.
 
 The published website should contain only the files in this folder. Research notes, local QA material, and the ZIP itself are not needed in your GitHub repository.
 
