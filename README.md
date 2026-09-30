@@ -1,6 +1,10 @@
 # The Rhinestone Rambler
 
-A lightweight Nashville vacation-home website, ready for GitHub Pages.
+A lightweight Nashville vacation-home website hosted on GitHub Pages.
+
+Live site: [therhinestonerambler.com](https://therhinestonerambler.com)  
+Repository: [IzzyIsaac/the-rhinestone-rambler](https://github.com/IzzyIsaac/the-rhinestone-rambler)  
+Publishing source: `main` branch, repository root.
 
 ## Preview it
 
@@ -8,25 +12,21 @@ Open `index.html` in Chrome, Safari, Edge, or Firefox. Keep the `assets` folder 
 
 The live preview from this Codex task is at [http://127.0.0.1:4173/](http://127.0.0.1:4173/). If that server has stopped, opening `index.html` still works.
 
-## Put it on GitHub
+## Keep it organized on GitHub
 
-1. Unzip the download and open the `rhinestone-rambler` folder.
-2. Create a new GitHub repository named `the-rhinestone-rambler` under `IzzyIsaac`, paired with the existing `the-ramblers-rest` repository. Choose **Public** if you use GitHub Free. Creating it with a README makes the upload interface easy to find.
-3. Choose **Add file → Upload files**. Upload the top-level files first and commit them, then upload the `assets` folder in a second commit. Replace the initial README if prompted. Do not upload the ZIP or wrap everything inside another `rhinestone-rambler` folder.
-4. Commit the upload to `main`. At the repository’s top level, you should see `index.html`, `photos.html`, and `assets`.
-5. Open **Settings → Pages**. Under **Build and deployment**, choose **Deploy from a branch**, then **main** and **/(root)**. Click **Save**.
-6. Open the address GitHub shows after deployment, normally `https://IzzyIsaac.github.io/the-rhinestone-rambler/`.
+This site has its own public repository, paired with the existing `the-ramblers-rest` repository. The live files are at the repository root: `index.html`, `photos.html`, `assets`, and the domain files. The ZIP is a backup for handoff; it is not part of the repository.
+
+To publish future changes, edit the files in your local clone of `the-rhinestone-rambler`, commit, and push `main` in GitHub Desktop. GitHub Pages deploys the commit automatically. You can also edit a small text file directly on GitHub and commit it there.
 
 These steps follow [GitHub’s publishing instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site). No Node.js, npm, framework, or build command is required.
 
 The empty `.nojekyll` file can be uploaded too. If your computer hides it, the site’s ordinary HTML/assets structure also works without it.
 
-## Connect therhinestonerambler.com
+## Domain setup
 
-The domain has been purchased through Squarespace. The site’s canonical URLs, sitemap, and `CNAME` file use `therhinestonerambler.com`.
+The domain is registered at Squarespace. The site’s canonical URLs, sitemap, and root-level `CNAME` file use `therhinestonerambler.com`. In **Settings → Pages**, the custom domain is the bare domain, so GitHub redirects `www` there.
 
-1. In the repository’s **Settings → Pages → Custom domain**, enter `therhinestonerambler.com` and save. GitHub should use the root-level `CNAME` file for branch publishing.
-2. In Squarespace Domains, remove the **Squarespace Defaults** DNS preset for this domain, then add these DNS records. Preserve the separate **Squarespace Domain Connect** and **Email Security** presets.
+Squarespace’s **Squarespace Defaults** parking preset was removed for this domain. Its separate **Squarespace Domain Connect** and **Email Security** presets remain. The custom DNS records are:
 
 | Type | Host/name | Value |
 | --- | --- | --- |
@@ -36,7 +36,7 @@ The domain has been purchased through Squarespace. The site’s canonical URLs, 
 | A | @ | 185.199.111.153 |
 | CNAME | www | IzzyIsaac.github.io |
 
-3. Allow time for DNS and certificate setup, then enable **Enforce HTTPS** in Pages settings. Test both the bare domain and `www`; GitHub should redirect `www` to the bare domain.
+The custom records use a 30-minute TTL. GitHub may need time to issue its certificate after a DNS change. Once **Enforce HTTPS** is available in Pages settings, turn it on. Both the bare domain and `www` should then redirect to HTTPS on the bare domain.
 
 The `www` value excludes `https://` and the repository name. Keep the root-level `CNAME` when uploading later revisions. See [GitHub’s custom-domain guide](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
 
