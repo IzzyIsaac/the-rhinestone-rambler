@@ -47,6 +47,8 @@
         document.cookie = `${name}=; Max-Age=0; path=/; domain=${domain}; SameSite=Lax`;
       }
     }
+    // Unload an already running tag as soon as consent is withdrawn.
+    if (tagLoaded) location.reload();
   }
 
   const panel = document.createElement('aside');
